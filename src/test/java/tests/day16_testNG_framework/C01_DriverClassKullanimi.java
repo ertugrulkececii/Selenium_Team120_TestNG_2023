@@ -13,7 +13,7 @@ public class C01_DriverClassKullanimi {
         WebElement aramaKutusu=Driver.getDriver().findElement(By.id("twotabsearchtextbox"));
         Driver.closeDriver();
     }
-    @Test
+    @Test(groups = {"smoke","regression"})
     public void youtubeTesti(){
         Driver.getDriver().get("https://www.youtube.com");
         Driver.closeDriver();

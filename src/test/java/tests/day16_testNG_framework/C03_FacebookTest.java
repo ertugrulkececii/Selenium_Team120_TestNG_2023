@@ -8,7 +8,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class C03_FacebookTest {
-    @Test
+    @Test(groups = {"smoke","e2e1"})
     public void facebookTesti() {
         //1 - https://www.facebook.com/ adresine gidin
         Driver.getDriver().get("https://www.facebook.com/");

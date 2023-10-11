@@ -17,7 +17,7 @@ public class C05_QualitydemyNegatifLoginTesti {
         //4- Login butonuna basarak login olun
         //5- Basarili olarak giris yapilamadigini test edin
         QualitydemyPage qualitydemyPage;
-        @Test
+        @Test(groups = {"e2e1","regression"})
         public void gecersizPasswordTest(){
 
             Driver.getDriver().get("https://www.qualitydemy.com/");
@@ -27,6 +27,9 @@ public class C05_QualitydemyNegatifLoginTesti {
 
             qualitydemyPage.emailKutusu.sendKeys("anevzatcelik@gmail.com");
             qualitydemyPage.passwordKutusu.sendKeys("12345");
+            QualitydemyPage qualitydemyPage=new QualitydemyPage();
+            qualitydemyPage.acceptCookies.click();
+            ReusableMethods.bekle(3);
             qualitydemyPage.loginButonu.click();
 
             ReusableMethods.bekle(1);
@@ -35,7 +38,7 @@ public class C05_QualitydemyNegatifLoginTesti {
             Driver.closeDriver();
         }
 
-        @Test
+        @Test(groups = {"regression"})
         public void gecersizEmailTesti(){
             Driver.getDriver().get("https://www.qualitydemy.com/");
 
@@ -43,6 +46,8 @@ public class C05_QualitydemyNegatifLoginTesti {
             qualitydemyPage.ilkLoginButonu.click();
             qualitydemyPage.emailKutusu.sendKeys("alican@gmail.com");
             qualitydemyPage.passwordKutusu.sendKeys("Nevzat152032");
+            qualitydemyPage.acceptCookies.click();
+            ReusableMethods.bekle(2);
             qualitydemyPage.loginButonu.click();
 
             ReusableMethods.bekle(1);
@@ -50,11 +55,13 @@ public class C05_QualitydemyNegatifLoginTesti {
             Driver.closeDriver();
         }
 
-        @Test
+        @Test(groups = {"e2e1","smoke"})
         public void gecersizEmailPasswordTesti(){
             Driver.getDriver().get("https://www.qualitydemy.com/ ");
 
             qualitydemyPage= new QualitydemyPage();
+            qualitydemyPage.acceptCookies.click();
+            ReusableMethods.bekle(2);
             qualitydemyPage.ilkLoginButonu.click();
             qualitydemyPage.emailKutusu.sendKeys("alican@gmail.com");
             qualitydemyPage.passwordKutusu.sendKeys("12345");
