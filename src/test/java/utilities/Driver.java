@@ -12,6 +12,9 @@ public class Driver {
     // JUnit'te WebDriver objemizi TestBase'den aliyorduk, TestNG extends ile baglanma zorunlulugununu ortadan kaldirmak
     //ve kontrolu testerlara vermek icin testbase yerine driver classínda statik 2 method ile
     // driver olusturma ve kapatma islemlerini tercih etmistir.
+    protected Driver(){
+
+    }
     static WebDriver driver;
     public static WebDriver getDriver(){
 

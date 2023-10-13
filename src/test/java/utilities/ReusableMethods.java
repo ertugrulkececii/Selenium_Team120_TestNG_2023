@@ -49,9 +49,7 @@ public class ReusableMethods {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public static void webElementFotografCek(WebElement webElement, String resimAdi) {
+    }public static void webElementFotografCek(WebElement webElement, String resimAdi) {
         // her screenshot'in benzersiz bir isme sahip olmasi icin
         // 1- method'un cagrildigi yerden resim adi yollanacak
         // 2- sonuna tarih etiketi ekleyelim 2310062013
@@ -68,7 +66,6 @@ public class ReusableMethods {
             throw new RuntimeException(e);
         }
     }
-
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
