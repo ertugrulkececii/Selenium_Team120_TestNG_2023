@@ -14,12 +14,15 @@ public class C05_QualitydemyNegatifLoginTesti {
     public void gecersizPasswordTest(){
 
         Driver.getDriver().get("https://www.qualitydemy.com/");
-
+        ReusableMethods.bekle(3);
+qualitydemyPage.acceptCookies.click();
         qualitydemyPage= new QualitydemyPage();
         qualitydemyPage.ilkLoginButonu.click();
 
         qualitydemyPage.emailKutusu.sendKeys("anevzatcelik@gmail.com");
         qualitydemyPage.passwordKutusu.sendKeys("12345");
+        qualitydemyPage.acceptCookies.click();
+        ReusableMethods.bekle(3);
         qualitydemyPage.loginButonu.click();
 
         ReusableMethods.bekle(1);
@@ -33,9 +36,13 @@ public class C05_QualitydemyNegatifLoginTesti {
         Driver.getDriver().get("https://www.qualitydemy.com/");
 
         qualitydemyPage= new QualitydemyPage();
+        qualitydemyPage.acceptCookies.click();
+        ReusableMethods.bekle(3);
         qualitydemyPage.ilkLoginButonu.click();
         qualitydemyPage.emailKutusu.sendKeys("alican@gmail.com");
         qualitydemyPage.passwordKutusu.sendKeys("Nevzat152032");
+        qualitydemyPage.acceptCookies.click();
+        ReusableMethods.bekle(3);
         qualitydemyPage.loginButonu.click();
 
         ReusableMethods.bekle(1);
@@ -51,6 +58,8 @@ public class C05_QualitydemyNegatifLoginTesti {
         qualitydemyPage.ilkLoginButonu.click();
         qualitydemyPage.emailKutusu.sendKeys("alican@gmail.com");
         qualitydemyPage.passwordKutusu.sendKeys("12345");
+        qualitydemyPage.acceptCookies.click();
+        ReusableMethods.bekle(3);
         qualitydemyPage.loginButonu.click();
 
         ReusableMethods.bekle(1);
